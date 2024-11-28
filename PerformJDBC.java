@@ -68,7 +68,7 @@ public class PerformJDBC {
                 double writeTimePerOp = totalWriteTime / (double) (RUNS * ROWS);
                 double readTimePerOp = (readEnd - readStart) / (double) (RUNS * ROWS);
 
-                System.out.printf("\nWrite time per row: %.3f ns%n", writeTimePerOp);
+                System.out.printf("\nWrite time per row: %.3f ms%n", writeTimePerOp / 1000000);
                 System.out.printf("Read time per row: %.3f ns%n", readTimePerOp);
             }
         } catch (ClassNotFoundException e) {
@@ -79,4 +79,3 @@ public class PerformJDBC {
         }
     }
 }
-

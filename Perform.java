@@ -30,8 +30,11 @@ public class Perform {
             long endRemove = System.nanoTime();
 
             // Progress updates (outside timing logic)
-            System.out.printf("\rRun %d/%d - Adding elements... Done in %.3f ms. Removing elements... Done in %.3f ms.",
-                    r + 1, RUNS, (endAdd - startAdd) / 1_000_000.0, (endRemove - startRemove) / 1_000_000.0);
+            System.out.printf(
+                    "\rRun %d/%d - Adding elements... Done in %.3f ms. Removing elements...  Done in %.3f ms.",
+                    r + 1, RUNS, (endAdd - startAdd) / 1_000_000.0, (endRemove - startRemove) /
+                            1_000_000.0);
+
         }
 
         long overallEnd = System.nanoTime();
@@ -40,4 +43,3 @@ public class Perform {
         System.out.printf("\nTotal time per operation: %.3f ns%n", totalTimePerOperation);
     }
 }
-
